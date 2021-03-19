@@ -34,6 +34,17 @@ else if(!isLoaded)
 {
   return <Loading/>
 }
+if(data.length===0)
+{
+  return (
+    <main>
+      <div className="title">
+        <h2>No Tours left</h2>
+        <button onClick={() => window.location.reload(false)} className="btn">Refresh</button>
+      </div>
+    </main>
+  )
+}
 else
   return(
   <main>
